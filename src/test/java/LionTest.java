@@ -20,7 +20,7 @@ public class LionTest
     @Test
     public void getFoodForLion() throws Exception
     {
-        Lion lion = new Lion(true, feline);
+        Lion lion = new Lion("Самец", feline);
         Mockito.when(feline.getFood("Хищник")).thenReturn(Arrays.asList("Животные", "Птицы", "Рыба"));
         List<String> actual = lion.getFood();
         List<String> expected = Arrays.asList("Животные", "Птицы", "Рыба");
@@ -28,9 +28,9 @@ public class LionTest
     }
 
     @Test
-    public void getKittensForLion()
+    public void getKittensForLion() throws Exception
     {
-        Lion lion = new Lion(true, feline);
+        Lion lion = new Lion("Самец", feline);
         Mockito.when(feline.getKittens()).thenReturn(1);
         int actual = lion.getKittens();
         int expected = 1;

@@ -34,4 +34,13 @@ public class FelineTest
         int expected = 1;
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void getKittensCountForFeline()
+    {
+        Feline feline = new Feline();
+        int actual = feline.getKittens(2);
+        int expected = 2;
+        assertEquals(expected, actual);
+    }
 }
